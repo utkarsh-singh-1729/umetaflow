@@ -12,7 +12,7 @@ expert_mode = wf.params.get("expert_mode", False)
 
 def update_expert_mode():
     wf.params["expert_mode"] = st.session_state["umetaflow-expert-mode"]
-    wf.parameter_manager.save_parameters_to_json()
+    wf.parameter_manager.save_parameters()
 
 st.toggle(
     "**Expert Mode**",
