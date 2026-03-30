@@ -780,10 +780,10 @@ class Workflow(WorkflowManager):
                 for file_name in selected_files
             ]
 
-        if len(mzML) == 0:
+        if len(mzML) < 1:
             self.logger.log(
-                "ERROR: Select at leat two mzML files to run this workflow."
-            )
+            "ERROR: Select at least one mzML file to run this workflow."
+    )
             return
 
         # # Get mzML input files from self.params.
